@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script  type="text/javascript" src="script.js"></script>
+    <title>Calcuinclusora</title>
+</head>
+<body id="pagina">
+    <form>
+    <div class="grid-container">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>  
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <input type="text" size="13" id="visor" title="visor" disabled>
+            <div id="teclado">
+                <button type="button" title='apaga tudo'class="btn btn-dark" onClick="clearDisplay()" id="c">C</button>
+                <button type="button"title='porcentagem'class="btn btn-dark" onClick="escrever( this )" id="%" >%</button>
+                <button type="button"title='adição'class="btn btn-dark" onClick="escrever( this )" id="+">+</button>
+                <button type="button"title='delete'class="btn btn-dark" onClick="clearLast()" id="del" >DEL</button><br>
+                <button type="button" title='7'class="btn btn-dark" onClick="escrever( this )" id="7">7</button>
+                <button type="button"title='8'class="btn btn-dark" onClick="escrever( this )" id="8">8</button>
+                <button type="button"title='9'class="btn btn-dark" onClick="escrever( this )" id="9">9</button>
+                <button type="button"title='divisão'class="btn btn-dark" onClick="escrever( this )" id="/">÷</button><br>
+                <button type="button" title='4'class="btn btn-dark" onClick="escrever( this)" id="4">4</button>
+                <button type="button"title='5'class="btn btn-dark" onClick="escrever( this )" id="5">5</button>
+                <button type="button"title='6'class="btn btn-dark" onClick="escrever( this )" id="6">6</button>
+                <button type="button"title='multiplicação'class="btn btn-dark" onClick="escrever( this )" id="*">x</button><br>
+                <button type="button" title='1'class="btn btn-dark" onClick="escrever( this )" id="1" >1</button>
+                <button type="button"title='2'class="btn btn-dark" onClick="escrever( this )" id="2">2</button>
+                <button type="button"title='3'class="btn btn-dark" onClick="escrever( this )" id="3">3</button>
+                <button type="button"title='subtração'class="btn btn-dark" onClick="escrever( this )" id="-">-</button><br>
+                <button type="button" title='0'class="btn btn-dark" onClick="escrever( this )" id="0">0</button>
+                <button type="button"title='vírgula'class="btn btn-dark" onClick="escrever( this )" id=".">.</button>
+                <button type="button"title='resultado'class="btn btn-dark" onclick="getValueVisor()" id="=" style="width: 113px;">=</button>
+                
+            </div>
+        </div>  
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"><button type="button" class="btn btn-dark" title='alto contraste'onclick="Trocar()" value="Clique aqui" id="botao">tc</button><button type="button" class="btn btn-dark" title='alto contraste'onclick="aumentar()" value="Clique aqui" id="botao">+</button></div>  
+      </div>
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script> 
+    </form>
+</body>
+</html>
